@@ -4,7 +4,7 @@ lets containerize the snapraid cli and daemon
 
 ## compose example
 
-```compose
+```yaml
 services:
   snapraid:
     build: .
