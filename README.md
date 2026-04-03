@@ -2,6 +2,9 @@
 
 lets containerize the snapraid cli and daemon
 
+> [!CAUTION]
+> ONLY A PROOF OF CONCEPT AT THIS POINT. DO NOT USE IN PRODUCTION!
+
 ## compose example
 
 ```yaml
