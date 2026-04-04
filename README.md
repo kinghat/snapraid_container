@@ -10,7 +10,7 @@ lets containerize the snapraid cli and daemon
 ```yaml
 services:
   snapraid:
-    build: .
+    image: ghcr.io/kinghat/snapraid_container:latest
     container_name: snapraid
     cap_add:
       - SYS_RAWIO # is necessary to allow smartctl permission to query your device SMART data.
