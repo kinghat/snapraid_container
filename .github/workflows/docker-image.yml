@@ -42,5 +42,4 @@ jobs:
 
     - name: Push Image
       if: github.event_name != 'pull_request'
-      # run: docker push ${{env.REGISTRY}}/${{ env.IMAGE_NAME }}:latest
       run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
