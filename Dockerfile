@@ -7,7 +7,7 @@ RUN apt update && apt install sudo wget zip build-essential zlib1g-dev smartmont
 
 RUN wget https://github.com/amadvance/snapraid/releases/download/v${SNAPRAID_CLI_VERSION}/snapraid-${SNAPRAID_CLI_VERSION}.tar.gz && \
     tar xf snapraid-${SNAPRAID_CLI_VERSION}.tar.gz
-RUN cd ${SNAPRAID_CLI_VERSION} && \
+RUN cd snapraid-${SNAPRAID_CLI_VERSION} && \
     ./configure && \
     make && sudo make install && \
     cp snapraid.conf.example /etc/snapraid.conf
