@@ -5,14 +5,14 @@ ARG SNAPRAID_DAEMON_VERSION=1.9
 
 RUN apt update && apt install sudo wget zip build-essential zlib1g-dev smartmontools util-linux -y
 
-RUN wget https://github.com/amadvance/snapraid/releases/download/v14.2/snapraid-${SNAPRAID_CLI_VERSION}.tar.gz && \
+RUN wget https://github.com/amadvance/snapraid/releases/download/v${SNAPRAID_CLI_VERSION}/snapraid-${SNAPRAID_CLI_VERSION}.tar.gz && \
     tar xf snapraid-${SNAPRAID_CLI_VERSION}.tar.gz
 RUN cd ${SNAPRAID_CLI_VERSION} && \
     ./configure && \
     make && sudo make install && \
     cp snapraid.conf.example /etc/snapraid.conf
 
-RUN wget https://github.com/amadvance/snapraid-daemon/releases/download/v1.6/snapraid-daemon-${SNAPRAID_DAEMON_VERSION}.tar.gz && \
+RUN wget https://github.com/amadvance/snapraid-daemon/releases/download/v${SNAPRAID_DAEMON_VERSION}/snapraid-daemon-${SNAPRAID_DAEMON_VERSION}.tar.gz && \
     tar xf snapraid-daemon-${SNAPRAID_DAEMON_VERSION}.tar.gz
 RUN cd snapraid-daemon-${SNAPRAID_DAEMON_VERSION} && \
     ./configure && \
